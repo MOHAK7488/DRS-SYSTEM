@@ -1,10 +1,10 @@
 import tkinter 
-import cv2 # pip install opencv-python
-import PIL.Image, PIL.ImageTk # pip install pillow
+import cv2 
+import PIL.Image, PIL.ImageTk
 from functools import partial
 import threading
 import time
-import imutils # pip install imutils
+import imutils 
 
 stream = cv2.VideoCapture("clip.mp4")
 flag = True
@@ -38,16 +38,6 @@ def pending(decision):
     # 2. Wait for 1 second
     time.sleep(3)
 
-    # 3. Display sponsor image
-  #  frame = cv2.cvtColor(cv2.imread("lords.jpg"), cv2.COLOR_BGR2RGB)
- #   frame = imutils.resize(frame, width=SET_WIDTH, height=SET_HEIGHT)
-  #  frame = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(frame))
-  #  canvas.image = frame
-  #  canvas.create_image(0,0, image=frame, anchor=tkinter.NW)
-
-    # 4. Wait for 1.5 second
-   # time.sleep(2.5)
-    # 5. Display out/notout image
     if decision == 'out':
         decisionImg = "out.png"
     else:
